@@ -1,0 +1,167 @@
+/*RESET BASICO*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+    font-family: sans-serif, Arial, Helvetica;
+    background-color: #000;
+    color: #fff;
+
+    /*background-image: url('../img/chapa.avif');
+    background-repeat: repeat; 
+    background-position: top center; 
+    background-attachment: ;
+    background-size: auto;*/
+}
+main{
+    margin-top: 70px;
+}
+/*SPLASH*/
+#splash{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/persiana.avif");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    overflow: hidden;
+}
+#splash.subir {
+    transform: translateY(-100%);
+    transition: transform 1s ease-in;
+}
+
+/*IMAGENES RESPONSIVE*/
+img{
+    max-width: 100%;
+    display: block;
+}
+/*SECCIONES*/
+section{
+    padding:40px 20px;
+    
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+/*CABECERA*/
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:linear-gradient(to bottom,rgba(60,170,60,1),rgba(60,170,60,0.9),rgb(60,170,60,0));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+    z-index: 1000;
+}
+header img{
+    width: 40%;
+}
+nav{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    overflow: hidden;           /* importante para la animación de altura */
+    height: 0;                  /* empieza cerrado */
+    transition: height 0.5s ease;
+    display: flex;
+}
+nav.activo{
+    height: 265px;
+    display: flex;
+}
+nav a{
+    padding: 15px;
+    border-bottom: 1px solid rgb(200,10,20);
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    
+}
+#menuBtn{
+    background:none;
+    border:1px solid #fff;
+    border-radius: 5px;
+    padding: 0px 3px;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+}
+/*HERO SECTION*/
+#hero{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+/*TRABAJOS REALIZADOS*/
+.galeria{
+    display:flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.galeria img{
+    height: 200px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    
+}
+/*UBICACION*/
+.mapa{
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mapa iframe{
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+
+
+
+.whatsapp-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+/*
+
+*/
