@@ -25,6 +25,16 @@ linksMenu.forEach(function(link){
         });
     });
 
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("chico");
+    } else {
+        header.classList.remove("chico");
+    }
+});
+
 /*const botonMenu = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
 const linksMenu = document.querySelectorAll("#menu a");
