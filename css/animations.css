@@ -1,0 +1,78 @@
+/* =====================================================
+   TARAFFO MOTOS
+   ANIMATIONS
+===================================================== */
+
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    40%{
+        transform:scale(1.15);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   PULSE
+===================================================== */
+
+.pulse{
+
+    animation:pulse .55s ease;
+
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+.reveal.visible{
+
+    animation:fadeUp .7s ease forwards;
+
+}
+
+
