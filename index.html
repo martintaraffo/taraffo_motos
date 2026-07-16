@@ -18,92 +18,72 @@
 <body>
 
     <!-- =========================
-         SPLASH
+        SPLASH
     ========================== -->
     <div id="splash">
         <img src="img/logo.png" alt="Logo de Taraffo Motos">
     </div>
 
     <!-- =========================
-         HEADER
+        HEADER
     ========================== -->
     <header class="header oculto">
 
         <div class="container header-content">
 
             <a href="#hero" class="logo">
-                <img src="img/taraffo_motos.svg" alt="Taraffo Motos">
+                <img src="img/logo.png" alt="Taraffo Motos">
             </a>
 
-            <button
-                id="menuBtn"
-                class="menu-btn"
-                type="button"
-                aria-label="Abrir menú"
-                aria-expanded="false"
+            <button id="menuBtn" class="menu-btn" type="button"
+                aria-label="Abrir menú" aria-expanded="false"
                 aria-controls="menu">
-
                 ☰
-
             </button>
 
+            <nav id="menu" class="nav">
+
+                <a href="#hero">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#revistas">Revistas</a>
+                <a href="#adrian">Sobre Adrián</a>
+                <a href="#contacto">Contacto</a>
+
+            </nav>
         </div>
-
-        <nav
-            id="menu"
-            class="nav">
-
-            <a href="#hero">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#adrian">Sobre Adrián</a>
-            <a href="#contacto">Contacto</a>
-
-        </nav>
 
     </header>
 
     <!-- =========================
-         MAIN
+        MAIN
     ========================== -->
 
     <main>
 
         <!-- =========================
-             HERO
+            HERO
         ========================== -->
 
-        <section
-            id="hero"
-            class="hero">
+        <section id="hero" class="hero">
 
             <div class="container stack">
 
                 <div class="hero-content">
 
-                    <h1>Taraffo Motos</h1>
+                    <h1>Taller de Adrian Taraffo</h1>
 
                     <p class="hero-subtitle">
-                        Más de 30 años dedicados a la mecánica de motos.
+                        Más de 50 años dedicados a la mecánica de motos
                     </p>
 
-                    <a
-                        href="https://wa.me/5491140332583"
-                        target="_blank"
-                        class="btn btn-primary">
-
-                        Pedir turno por WhatsApp
-
+                    <a href="#revistas" class="btn      btn-primary">
+                    Comprar Tomo 1
                     </a>
 
-                    <div class="hero-tags">
-
-                        <span>Mantenimiento</span>
-
-                        <span>Diagnóstico</span>
-
-                        <span>Reparaciones</span>
-
-                    </div>
+                    <a href="https://wa.me/5491140332583"
+                        target="_blank" class="btn">
+                        Pedir turno por WhatsApp
+                    </a>
 
                 </div>
 
@@ -112,12 +92,9 @@
         </section>
 
         <!-- =========================
-             SERVICIOS
+            SERVICIOS
         ========================== -->
-
-        <section
-            id="servicios"
-            class="services">
+        <section id="servicios" class="services">
 
             <div class="container stack">
 
@@ -131,46 +108,117 @@
 
                 </div>
 
-                <div class="services-grid">
+                <div class="gallery services-gallery">
+
+    <article class="service-card">
+
+        <img src="img/acarreo.jpg" alt="Acarreo">
+
+        <div class="service-info">
+
+            <h3>🛠️ Service </h3>
+
+            <ul>
+                <li>Aceite, filtros, frenos</li>
+                <li>Transmision, valvulas, lubricacion</li>
+                <li>Revision general, balanceo</li>
+            </ul>
+
+        </div>
+
+    </article>
+
+    <article class="service-card">
+
+        <img src="img/balanceo.jpg" alt="Balanceo">
+
+        <div class="service-info">
+
+            <h3>⚙️ Mecanica general</h3>
+
+            <ul>
+                <li>Inyeccion, electricidad</li>
+                <li>Diagnostico electronico</li>
+                <li>Sistema de carga</li>
+                
+            </ul>
+
+        </div>
+
+    </article>
+
+    <article class="service-card">
+
+        <img src="img/escaner.jpg" alt="Escáner">
+
+        <div class="service-info">
+
+            <h3>💻 Auxilio y translado </h3>
+
+            <p>
+                Te quedaste en medio de la ruta?
+                Queres traer una moto que no funciona?
+                Te vamos a buscar!
+            </p>
+
+        </div>
+
+    </article>
+
+    <!-- =====================================================
+         DUPLICAR ESTE BLOQUE PARA AGREGAR MÁS SERVICIOS
+    ====================================================== -->
+
+    <!--
+
+    <article class="service-card">
+
+        <img src="img/servicio.jpg" alt="Servicio">
+
+        <div class="service-info">
+
+            <h3>Nombre del servicio</h3>
+
+            <p>
+                Descripción breve.
+            </p>
+
+        </div>
+
+    </article>
+
+    -->
+
+</div>
+
+                <!-- <div class="services-grid">
 
                     <article class="service-card">
-
                         <h3>🛠️ Mantenimiento</h3>
-
                         <p>
                             Service completo y controles periódicos.
                         </p>
-
                     </article>
 
                     <article class="service-card">
-
                         <h3>⚙️ Motor</h3>
-
                         <p>
                             Diagnóstico y reparación.
                         </p>
-
                     </article>
 
                     <article class="service-card">
-
                         <h3>🏍️ Transmisión</h3>
-
                         <p>
                             Cadena, transmisión y regulación.
                         </p>
-
                     </article>
 
                     <article class="service-card">
-
                         <h3>🔧 Puesta a punto</h3>
-
                         <p>
                             Preparación para viajar con tranquilidad.
                         </p>
-
                     </article>
 
                 </div>
@@ -178,31 +226,94 @@
                     <div class="gallery">
 
                         <img src="img/acarreo.jpg" alt="Acarreo">
-
                         <img src="img/balanceo.jpg" alt="Balanceo">
-
                         <img src="img/escaner.jpg" alt="Scaner">
 
-                    </div>
+                    </div> -->
 
             </div>
 
         </section>
 
         <!-- =========================
-             SOBRE ADRIÁN
+            Revistas
         ========================== -->
 
-        <section
-            id="adrian"
-            class="about">
+        <section id="revistas" class="magazines">
+
+            <div class="container stack">
+                <div class="section-header">
+
+                <h2>Coleccion Taraffo Motos</h2>
+
+                <p>
+                    Manuales digitales para el cuidado y mantenimiento de tu moto.
+                </p>
+
+            </div>
+
+        <article class="featured-magazine">
+
+            <img src="img/tomo-8.jpg" alt="Último tomo publicado">
+
+            <h3>Último tomo</h3>
+
+            <a href="#" class="btn btn-primary">
+                Comprar ultimo tomo
+            </a>
+
+        </article>
+
+        <!-- ==========================================
+     COLECCIÓN COMPLETA
+========================================== -->
+
+    <!-- ======================================
+         CUANDO SALGA EL TOMO 2
+
+    <a href="LINK_DEL_TOMO_2"
+       class="collection-item">
+
+        <span>Tomo 2</span>
+
+        <span>Comprar →</span>
+
+    </a>
+
+    ======================================= -->
+
+
+    <!-- ======================================
+         CUANDO SALGA EL TOMO 3
+
+    <a href="LINK_DEL_TOMO_3"
+       class="collection-item">
+
+        <span>Tomo 3</span>
+
+        <span>Comprar →</span>
+
+    </a>
+
+    ======================================= -->
+
+
+
+    </div>
+
+</section>
+
+        <!-- =========================
+            SOBRE ADRIÁN
+        ========================== -->
+
+        <section id="adrian" class="about">
 
             <div class="container stack">
 
                 <div class="section-header">
 
                     <h2>Sobre Adrián</h2>
-
                     <p>
                         La historia del taller y la experiencia
                         de Adrián. Este texto será reemplazado.
@@ -213,9 +324,7 @@
                     <div class="gallery">
 
                         <img src="img/sofi_argentina.jpg" alt="Sofi argenta">
-
                         <img src="img/montanias.jpg" alt="Montañas">
-
                         <img src="img/papa_sentado_sofi.jpg" alt="Explicando">
 
                     </div>
@@ -224,22 +333,16 @@
         </section>
 
         <!-- =========================
-             CONTACTO
+            CONTACTO
         ========================== -->
 
-        <section
-            id="contacto"
-            class="contact">
+        <section id="contacto" class="contact">
 
             <div class="container stack">
 
                 <div class="section-header">
 
-                    <h2>Contacto</h2>
-
-                    <p>
-                        Elegí el medio que te resulte más cómodo.
-                    </p>
+                    <h2>Contacto:</h2>
 
                 </div>
 
@@ -247,19 +350,13 @@
 
                     <a href="#" aria-label="WhatsApp">
 
-                        <img src="" alt="WhatsApp">
+                        <img src="img/turno.png" alt="WhatsApp">
 
                     </a>
 
                     <a href="#" aria-label="Instagram">
 
-                        <img src="" alt="Instagram">
-
-                    </a>
-
-                    <a href="#" aria-label="Correo electrónico">
-
-                        <img src="" alt="Correo electrónico">
+                        <img src="img/instagram-logo.svg" alt="Instagram">
 
                     </a>
 
@@ -272,35 +369,24 @@
     </main>
 
     <!-- =========================
-         BOTÓN FLOTANTE
+        BOTÓN FLOTANTE
     ========================== -->
 
-    <a
-        href="https://wa.me/5491140332583"
-        class="whatsapp-btn"
-        target="_blank"
-        aria-label="Enviar mensaje por WhatsApp">
-
+    <a href="https://wa.me/5491140332583" class="whatsapp-btn"
+        target="_blank" aria-label="Enviar mensaje por WhatsApp">
         <img src="img/turno.png" alt="WhatsApp">
-
     </a>
 
     <!-- =========================
-         FOOTER
+        FOOTER
     ========================== -->
 
     <footer class="footer">
-
         <div class="container">
-
             <p>
-
                 © Taraffo Motos · Todos los derechos reservados.
-
             </p>
-
         </div>
-
     </footer>
 
     <script src="js/main.js"></script>

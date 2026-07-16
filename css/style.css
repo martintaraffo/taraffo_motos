@@ -1,382 +1,603 @@
 /* =====================================================
-   TARAFFO MOTOS
-   Design System v1.0
+    TARAFFO MOTOS
+    DESIGN SYSTEM v1.0
 ===================================================== */
 
+
 /* =====================================================
-   RESET
+    RESET
 ===================================================== */
+
 *,
 *::before,
 *::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
+
     min-height:100vh;
+
 }
 
+
 /* =====================================================
-   VARIABLES
+    VARIABLES
 ===================================================== */
 
 :root{
 
-    /* ========= Header ========= */
 
-    --header-height:80px;
-    --header-height-small:40px;
-
-    /* ========= Colores ========= */
+    /* COLORES */
 
     --color-bg:#1a1a1a;
+
     --color-surface:#262626;
+
     --color-surface-light:#303030;
 
     --color-text:#f5f5f5;
+
     --color-text-muted:#bdbdbd;
 
     --color-primary:#36b24a;
+
     --color-primary-hover:#42c95a;
 
     --color-border:#3b3b3b;
 
+
     --color-overlay:rgba(0,0,0,.55);
 
-    /* ========= Tipografía ========= */
+
+
+    /* TIPOGRAFIA */
 
     --font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    --font-size-xs:.85rem;
-    --font-size-sm:1rem;
-    --font-size-md:1.15rem;
-    --font-size-lg:1.5rem;
-    --font-size-xl:2.3rem;
-    --font-size-2xl:3rem;
 
-    /* ========= Espaciados ========= */
+
+    /* ESPACIADOS */
 
     --space-xs:.5rem;
+
     --space-sm:1rem;
+
     --space-md:1.5rem;
+
     --space-lg:2rem;
+
     --space-xl:3rem;
+
     --space-2xl:4rem;
 
-    /* ========= Bordes ========= */
+
+
+    /* BORDES */
 
     --radius-sm:10px;
+
     --radius-md:18px;
+
     --radius-lg:30px;
+
     --radius-full:999px;
 
-    /* ========= Sombras ========= */
+
+
+    /* SOMBRAS */
 
     --shadow-sm:
-        0 4px 12px rgba(0,0,0,.20);
+    0 4px 12px rgba(0,0,0,.20);
+
 
     --shadow-md:
-        0 10px 30px rgba(0,0,0,.30);
+    0 10px 30px rgba(0,0,0,.30);
 
-    /* ========= Transiciones ========= */
+
+
+    /* HEADER */
+
+    --header-height:80px;
+
+    --header-height-small:40px;
+
+
+
+    /* TRANSICIONES */
 
     --transition:.3s ease;
 
+
+
 }
 
 
+
 /* =====================================================
-   BASE
+    BASE
 ===================================================== */
+
 
 body{
+
     font-family:var(--font-family);
+
     background:var(--color-bg);
+
     color:var(--color-text);
+
     line-height:1.6;
+
     overflow-x:hidden;
+
 }
+
 
 img{
+
     display:block;
+
     max-width:100%;
+
 }
+
 
 a{
+
     color:inherit;
+
     text-decoration:none;
+
 }
+
 
 button{
+
     font:inherit;
+
     border:none;
+
     background:none;
+
     cursor:pointer;
+
 }
 
-ul{
-    list-style:none;
-}
 
-/* =====================================================
-   TIPOGRAFÍA
-===================================================== */
 
 h1{
+
     font-size:clamp(2.4rem,6vw,4rem);
+
     line-height:1.1;
+
     margin-bottom:var(--space-md);
+
 }
+
+
 
 h2{
+
     font-size:clamp(2rem,5vw,2.8rem);
+
     margin-bottom:var(--space-sm);
+
 }
+
+
 
 h3{
+
     font-size:1.15rem;
-    margin-bottom:.5rem;
+
 }
+
 
 p{
+
     color:var(--color-text-muted);
+
 }
 
+
+
 /* =====================================================
-   LAYOUT
+    LAYOUT
 ===================================================== */
+
 
 .container{
+
     width:min(1100px,calc(100% - 2rem));
+
     margin-inline:auto;
+
 }
+
+
 
 .stack{
+
     display:flex;
+
     flex-direction:column;
+
     gap:2rem;
+
 }
+
+
 
 section{
+
     padding-top:2rem;
-    padding-bottom:4rem;
+
     scroll-margin-top:var(--header-height-small);
+
 }
+
+
 
 .section-header{
-    max-width:700px;
+
+    width:min(1100px,calc(100% - 2rem));
+
     margin-inline:auto;
+
     text-align:center;
+
 }
 
+
+
 /* =====================================================
-   BOTONES
+    BOTONES
 ===================================================== */
+
 
 .btn{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     padding:.9rem 1.6rem;
+
     border-radius:var(--radius-full);
+
     font-weight:700;
+
     transition:var(--transition);
+
 }
+
+
 
 .btn-primary{
+
     background:var(--color-primary);
+
     color:white;
+
     box-shadow:var(--shadow-sm);
+
 }
+
+
 
 .btn-primary:hover{
+
     background:var(--color-primary-hover);
+
     transform:translateY(-2px);
+
 }
+
 /* =====================================================
-   HERO TAGS
+    HERO TAGS
 ===================================================== */
+
 
 .hero-tags{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:.75rem;
+
     margin-top:var(--space-lg);
+
 }
+
+
 
 .hero-tags span{
+
     padding:.55rem 1rem;
+
     border-radius:999px;
+
     background:rgba(255,255,255,.08);
+
     border:1px solid rgba(255,255,255,.12);
+
     font-size:.9rem;
+
 }
+
+
 
 /* =====================================================
-   TARJETAS
+    SPLASH
 ===================================================== */
 
-.service-card{
-    padding:1.5rem;
-    background:var(--color-surface);
-    border:1px solid var(--color-border);
-    border-radius:var(--radius-md);
-    box-shadow:var(--shadow-sm);
-    transition:var(--transition);
-}
-
-.service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow-md);
-}
-
-/* =====================================================
-   SPLASH
-===================================================== */
 
 #splash{
+
     position:fixed;
+
     inset:0;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     background:url("../img/persiana.avif") center / cover;
+
     z-index:9999;
+
 }
+
+
 
 #splash img{
+
     width:min(220px,60vw);
+
 }
+
+
 
 #splash.subir{
+
     transform:translateY(-100%);
+
     transition:transform .9s ease;
+
 }
 
+
+
+
 /* =====================================================
-   HEADER
+    HEADER
 ===================================================== */
+
 
 .header{
+
     position:fixed;
+
     inset:0 0 auto 0;
+
     width:100%;
+
     z-index:1000;
+
     background:rgba(26,26,26,.92);
+
     backdrop-filter:blur(12px);
+
     border-bottom:1px solid rgba(255,255,255,.06);
+
     transition:
+
         transform .35s ease,
+
         background .35s ease,
+
         box-shadow .35s ease;
+
 }
+
+
 
 .header.chico{
+
     background:rgba(20,20,20,.98);
+
     box-shadow:var(--shadow-sm);
+
 }
+
+
 
 .header.oculto{
+
     transform:translateY(-100%);
+
 }
+
+
 
 .header-content{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     height:var(--header-height);
+
     transition:height .3s ease;
+
 }
+
+
 
 .header.chico .header-content{
+
     height:var(--header-height-small);
+
 }
 
+
+
+
 /* =====================================================
-   LOGO
+    LOGO
 ===================================================== */
+
 
 .logo{
+
     display:flex;
+
     align-items:center;
+
 }
+
+
 
 .logo img{
-    width:170px;
+
+    width:90px;
+
     transition:var(--transition);
+
 }
+
+
 
 .header.chico .logo img{
-    width:110px;
+
+    width:50px;
+
 }
 
 
+
+
 /* =====================================================
-   MENU BUTTON
+    MENU
 ===================================================== */
+
 
 .menu-btn{
+
     padding:.35rem;
+
     font-size:2rem;
+
     color:var(--color-text);
-    transition:var(--transition);
+
 }
+
+
 
 .menu-btn:hover{
+
     color:var(--color-primary);
+
 }
 
-/* =====================================================
-   NAV
-===================================================== */
+
+
 
 .nav{
+
     position:absolute;
+
     top:100%;
+
     left:0;
+
     width:100%;
+
     display:flex;
+
     flex-direction:column;
+
     overflow:hidden;
+
     max-height:0;
+
     background:var(--color-surface);
+
     border-bottom:1px solid var(--color-border);
+
     transition:max-height .35s ease;
+
 }
+
+
 
 .nav.activo{
+
     max-height:350px;
+
 }
+
+
 
 .nav a{
+
     padding:1rem;
+
     text-align:center;
+
     font-weight:600;
+
     border-bottom:1px solid rgba(255,255,255,.05);
-    transition:var(--transition);
+
 }
+
+
 
 .nav a:hover{
+
     color:var(--color-primary);
-    background:rgba(255,255,255,.05);
+
 }
 
+
+
 /* =====================================================
-   HERO
+    HERO
 ===================================================== */
+
+
 .hero{
+
     position:relative;
+
     min-height:100vh;
+
     display:flex;
 
     align-items:center;
@@ -388,6 +609,8 @@ section{
     background:url("../img/papa_sumoto.jpg") center / cover;
 
 }
+
+
 
 .hero::before{
 
@@ -401,6 +624,8 @@ section{
 
 }
 
+
+
 .hero .container{
 
     position:relative;
@@ -408,6 +633,8 @@ section{
     z-index:2;
 
 }
+
+
 
 .hero-content{
 
@@ -417,6 +644,8 @@ section{
 
 }
 
+
+
 .hero-subtitle{
 
     font-size:1.15rem;
@@ -425,28 +654,13 @@ section{
 
 }
 
-.hero .btn{
 
-    margin-top:1rem;
-
-}
-
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services-grid{
-
-    display:grid;
-
-    gap:1.5rem;
-
-}
 
 
 /* =====================================================
-   GALLERY
+    GALERIAS
 ===================================================== */
+
 
 .gallery{
 
@@ -466,11 +680,15 @@ section{
 
 }
 
+
+
 .gallery::-webkit-scrollbar{
 
     display:none;
 
 }
+
+
 
 .gallery img{
 
@@ -488,27 +706,109 @@ section{
 
     box-shadow:var(--shadow-md);
 
-    transition:transform .3s ease;
-
-}
-
-.gallery img:hover{
-
-    transform:scale(1.02);
-
 }
 
 
-/* =====================================================
-   ABOUT
-===================================================== */
 
-/* (sin estilos propios por ahora) */
 
 
 /* =====================================================
-   CONTACTO
+    SERVICIOS
 ===================================================== */
+
+
+.services-gallery .service-card{
+
+    position:relative;
+
+    flex:0 0 75%;
+
+    aspect-ratio:9 / 16;
+
+    overflow:hidden;
+
+    border-radius:var(--radius-lg);
+
+    scroll-snap-align:center;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+
+.services-gallery .service-card img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.services-gallery .service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    z-index:1;
+
+}
+
+
+
+.services-gallery .service-info{
+
+    position:absolute;
+
+    inset:0;
+
+    padding:1.5rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    z-index:2;
+
+}
+
+
+
+.services-gallery h3{
+
+    color:white;
+
+    font-size:1.5rem;
+
+}
+
+
+
+.services-gallery p{
+
+    color:white;
+
+}
+
+/* =====================================================
+    CONTACTO
+===================================================== */
+
 
 .social-links{
 
@@ -521,6 +821,8 @@ section{
     flex-wrap:wrap;
 
 }
+
+
 
 .social-links a{
 
@@ -544,6 +846,8 @@ section{
 
 }
 
+
+
 .social-links a:hover{
 
     background:var(--color-primary);
@@ -552,6 +856,8 @@ section{
 
 }
 
+
+
 .social-links img{
 
     width:32px;
@@ -559,9 +865,12 @@ section{
 }
 
 
+
+
 /* =====================================================
-   WHATSAPP
+    WHATSAPP
 ===================================================== */
+
 
 .whatsapp-btn{
 
@@ -587,17 +896,11 @@ section{
 
     box-shadow:var(--shadow-md);
 
-    transition:var(--transition);
-
     z-index:900;
 
 }
 
-.whatsapp-btn:hover{
 
-    transform:scale(1.08);
-
-}
 
 .whatsapp-btn img{
 
@@ -605,9 +908,13 @@ section{
 
 }
 
+
+
+
 /* =====================================================
-   FOOTER
+    FOOTER
 ===================================================== */
+
 
 .footer{
 
@@ -621,24 +928,29 @@ section{
 
 }
 
+
+
 .footer p{
 
     font-size:.9rem;
 
-    color:var(--color-text-muted);
-
 }
 
 
+
+
 /* =====================================================
-   UTILIDADES
+    UTILIDADES
 ===================================================== */
+
 
 .hidden{
 
     display:none !important;
 
 }
+
+
 
 .visually-hidden{
 
@@ -648,20 +960,20 @@ section{
 
     height:1px;
 
-    margin:-1px;
-
     overflow:hidden;
 
     clip:rect(0,0,0,0);
 
-    white-space:nowrap;
-
 }
 
 
+
+
+
 /* =====================================================
-   ACCESIBILIDAD
+    ACCESIBILIDAD
 ===================================================== */
+
 
 a:focus-visible,
 button:focus-visible{
@@ -670,16 +982,19 @@ button:focus-visible{
 
     outline-offset:4px;
 
-    border-radius:var(--radius-sm);
-
 }
 
 
+
+
+
 /* =====================================================
-   TABLET
+    TABLET
 ===================================================== */
 
+
 @media (min-width:768px){
+
 
     .stack{
 
@@ -687,17 +1002,7 @@ button:focus-visible{
 
     }
 
-    .services-grid{
 
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .gallery{
-
-        justify-content:flex-start;
-
-    }
 
     .gallery img{
 
@@ -705,16 +1010,32 @@ button:focus-visible{
 
     }
 
+
+
+    .services-gallery .service-card{
+
+        flex:0 0 300px;
+
+    }
+
+
 }
 
 
+
+
+
 /* =====================================================
-   DESKTOP
+    DESKTOP
 ===================================================== */
+
 
 @media (min-width:1024px){
 
-    /* ---------------- Header ---------------- */
+
+
+    /* HEADER */
+
 
     .menu-btn{
 
@@ -722,11 +1043,15 @@ button:focus-visible{
 
     }
 
+
+
     .header-content{
 
         height:80px;
 
     }
+
+
 
     .nav{
 
@@ -736,15 +1061,9 @@ button:focus-visible{
 
         flex-direction:row;
 
-        align-items:center;
-
-        gap:.5rem;
-
         width:auto;
 
         max-height:none;
-
-        overflow:visible;
 
         background:none;
 
@@ -752,25 +1071,36 @@ button:focus-visible{
 
     }
 
-    .nav a{
 
-        padding:.75rem 1rem;
+
+    .nav a{
 
         border:none;
 
         border-radius:999px;
 
+        padding:.75rem 1rem;
+
     }
 
-    /* ---------------- Hero ---------------- */
+
+
+
+
+    /* HERO */
+
 
     .hero{
 
-        text-align:center;
+        background-position:center 20%;
 
     }
 
+
+
     .hero .container{
+
+        min-height:100vh;
 
         display:flex;
 
@@ -778,116 +1108,58 @@ button:focus-visible{
 
         align-items:center;
 
-        min-height:100vh;
-
     }
+
+
 
     .hero-content{
 
         width:min(760px,100%);
 
-        margin-inline:auto;
+    }
 
-        text-align:center;
+
+
+
+
+    /* GALERIAS */
+
+
+    .gallery img{
+
+        width:260px;
 
     }
 
-    .hero-tags{
 
-        justify-content:center;
 
-    }
+    .services-gallery .service-card{
 
-    /* ---------------- Servicios ---------------- */
-
-    .services-grid{
-
-        grid-template-columns:repeat(4,1fr);
+        flex:0 0 260px;
 
     }
 
-    /* ---------------- Galerías ---------------- */
 
-.gallery-wrapper{
-
-    position:relative;
 
 }
 
-.gallery{
 
-    display:flex;
 
-    gap:1rem;
-
-    overflow-x:auto;
-
-    scroll-snap-type:x mandatory;
-
-    scrollbar-width:none;
-
-    -webkit-overflow-scrolling:touch;
-
-    padding-bottom:.5rem;
-
-}
-
-.gallery img{
-
-    flex:0 0 auto;
-
-    width:260px;
-
-}
-
-.gallery-hint{
-
-    position:absolute;
-
-    top:0;
-
-    right:0;
-
-    bottom:0;
-
-    width:70px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    pointer-events:none;
-
-    background:linear-gradient(
-        to left,
-        rgba(26,26,26,.85),
-        rgba(26,26,26,0)
-    );
-
-}
-    /* ---------------- Contacto ---------------- */
-
-    .social-links{
-
-        gap:1.5rem;
-
-    }
-
-}
 
 
 /* =====================================================
-   LARGE DESKTOP
+    LARGE DESKTOP
 ===================================================== */
 
+
 @media (min-width:1400px){
+
 
     :root{
 
         --space-2xl:5rem;
 
     }
+
 
 }
