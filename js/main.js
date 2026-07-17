@@ -108,3 +108,26 @@ window.addEventListener("resize", controlarHeader);
 
 // Estado inicial.
 controlarHeader();
+
+//boton de compra
+document.querySelectorAll(".comprar-ultimo-tomo")
+.forEach(boton => {
+
+    boton.addEventListener("click", async (e) => {
+
+        e.preventDefault();
+
+        const respuesta = await fetch(
+            "http://localhost:3000/api/payments/create-preference",
+            {
+                method: "POST"
+            }
+        );
+
+        const data = await respuesta.json();
+
+        window.location.href = data.init_point;
+
+    });
+
+});
