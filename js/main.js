@@ -118,7 +118,7 @@ document.querySelectorAll(".comprar-ultimo-tomo")
         e.preventDefault();
 
         const respuesta = await fetch(
-            "http://localhost:3000/api/payments/create-preference",
+            "https://taraffo-digital-backend.onrender.com/api/payments/create-preference",
             {
                 method: "POST"
             }
