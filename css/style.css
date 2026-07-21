@@ -1163,3 +1163,124 @@ button:focus-visible{
 
 
 }
+/* =====================================================
+   SUCCESS PAGE
+===================================================== */
+
+.success-page {
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:var(--space-lg);
+
+    background:var(--color-bg);
+
+}
+
+
+.success-card {
+
+    width:100%;
+
+    max-width:500px;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    padding:var(--space-2xl);
+
+    text-align:center;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+.success-logo {
+
+    width:140px;
+
+    margin-bottom:var(--space-lg);
+
+}
+
+
+.success-card h1 {
+
+    color:var(--color-text);
+
+    font-size:2rem;
+
+    margin-bottom:var(--space-md);
+
+}
+
+
+.success-card p {
+
+    color:var(--color-text-muted);
+
+    line-height:1.6;
+
+    margin-bottom:var(--space-md);
+
+}
+
+
+.success-card strong {
+
+    color:var(--color-text);
+
+}
+
+
+.success-card .btn {
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:var(--space-lg);
+
+    padding:1rem 2rem;
+
+    border:none;
+
+    border-radius:var(--radius-full);
+
+    background:var(--color-primary);
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+
+.success-card .btn:hover {
+
+    background:var(--color-primary-hover);
+
+}
+
+
+.success-message {
+
+    margin-top:var(--space-md);
+
+}
